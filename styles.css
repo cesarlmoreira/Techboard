@@ -1,0 +1,124 @@
+/* Denifição de fontes */
+@font-face {
+    font-family: "Unbounded";
+    src: url("./fonts/Unbounded-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Poppins";
+    src: url("./fonts/Poppins-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --bg-color: #0E1014;
+    --primary-color: #ffffff;
+    --secundary-color: #9747FF;
+    --terciary-color: #8233E8;
+    --main-font: "Unbounded", sans-serif;
+    --secundary-font: "Poppins", sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+}
+
+.header {
+    margin: 3rem 20rem;
+}
+
+.main-section {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 40vw;
+    margin: 0 auto;
+}
+
+.main-section__title {
+    font-family: var(--main-font);
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.main-section__title__purple {
+    color: var(--secundary-color);
+}
+
+.main-section__text {
+    font-family: var(--secundary-font);
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin: 1.5rem 0 2.5rem 0;
+}
+
+.main-section__link {
+    font-family: var(--secundary-font);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    text-decoration: none;
+    padding: 1rem 1.5rem;
+    border-radius: 48px;
+    background-color: var(--secundary-color);
+    width: 20vw;
+    margin: 0 auto;
+}
+
+.main-section__link:hover {
+    background-color: var(--terciary-color);
+}
+
+.main-section__image {
+    margin-top: 2.5rem;
+}
+
+@media screen and (max-width: 768px) {
+    .header {
+        margin: 4rem auto 4rem 3rem;
+    }
+
+    .main-section {
+        width: 85vw;
+    }
+
+    .main-section__link {
+        width: 40vw;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .header {
+        margin: 2rem auto 2rem 1rem;
+    }
+
+    .main-section {
+        width: 90vw;
+    }
+
+    .main-section__title {
+        font-size: 2.5rem;
+    }
+
+    .main-section__text,
+    .main-section__link {
+        font-size: 1.25rem;
+    }
+
+    .main-section__link {
+        width: 55vw;
+    }
+
+}
